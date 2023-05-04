@@ -10,10 +10,10 @@ const { environment } = parseArgs(process.argv.slice(2), options);
 
 const envFileName = `${environment}.env`;
 
-if (envFileName === "development.env")
-  config({
-    path: path.resolve(process.cwd(), envFileName),
-  });
+if (envFileName === "development.env") console.log("development environment");
+config({
+  path: path.resolve(process.cwd(), envFileName),
+});
 
 module.exports = {
   NODE_ENV: environment || "development",

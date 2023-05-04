@@ -41,7 +41,7 @@ app.use((err, req, res, next) => {
   }
 });
 
-const PORT = config.PORT;
+const PORT = `0.0.0.0:${config.PORT}`;
 httpServer.listen(PORT, () => {
   console.log(
     `Servidor escuchando en el puerto ${PORT}: Environment: ${config.NODE_ENV}`
