@@ -31,4 +31,6 @@ module.exports = {
   MAIL_ADDRESS: process.env.MAIL_ADDRESS,
   MAIL_PASS: process.env.MAIL_PASS,
   FRONTEND_URL: process.env.FRONTEND_URL,
+  SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+  SENDGRID_USER: process.env.SENDGRID_USER,
 };
