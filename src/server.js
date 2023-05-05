@@ -18,11 +18,11 @@ const whitelist = [
 ];
 const corsOptions = {
   origin: function (origin, callback) {
-    if (whitelist.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Error de CORS"));
-    }
+    callback(null, true);
+    // if (whitelist.includes(origin)) {
+    // } else {
+    //   callback(new Error("Error de CORS"));
+    // }
   },
 };
 
