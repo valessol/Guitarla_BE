@@ -10,13 +10,15 @@ const { environment } = parseArgs(process.argv.slice(2), options);
 
 const envFileName = `${environment}.env`;
 
-if (envFileName === "development.env") console.log("development environment");
-config({
-  path: path.resolve(process.cwd(), envFileName),
-});
+if (envFileName === "development.env") {
+  console.log("development environment");
+  config({
+    path: path.resolve(process.cwd(), envFileName),
+  });
+}
 
 module.exports = {
-  NODE_ENV: environment || "development",
+  NODE_ENV: process.env.NODE_ENV || environment || "development",
   PORT: process.env.PORT || 8080,
   MONGO_DATA_BASE_URL: process.env.MONGO_DATA_BASE_URL,
   PERSISTENCE: process.env.PERSISTENCE || "file",
